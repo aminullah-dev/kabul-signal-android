@@ -36,6 +36,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.kabulsignal.news.R
 import com.kabulsignal.news.data.model.Article
 import com.kabulsignal.news.util.ArticleHtml
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -86,6 +88,8 @@ fun ArticleScreen(
                 state.isLoading -> CircularProgressIndicator()
                 state.isError || article == null -> ErrorState(onRetry = viewModel::load)
                 else -> ArticleWebView(article)
+
+
             }
         }
     }

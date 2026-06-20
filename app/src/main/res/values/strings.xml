@@ -2,16 +2,16 @@
 <resources>
     <string name="app_name">Kabul Signal</string>
 
-    <string name="tab_latest">جدیدترین</string>
-    <string name="action_search">جستجو</string>
-    <string name="action_share">اشتراک‌گذاری</string>
-    <string name="action_open_in_browser">باز کردن در مرورگر</string>
-    <string name="action_retry">تلاش دوباره</string>
-    <string name="action_back">بازگشت</string>
+    <string name="tab_latest">Latest</string>
+    <string name="action_search">Search</string>
+    <string name="action_share">Share</string>
+    <string name="action_open_in_browser">Open in browser</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_back">Back</string>
 
-    <string name="search_hint">جستجو در اخبار…</string>
-    <string name="empty_title">چیزی یافت نشد</string>
-    <string name="empty_body">مطلبی برای نمایش وجود ندارد.</string>
-    <string name="error_generic">خطا در بارگذاری. اتصال اینترنت خود را بررسی کنید.</string>
-    <string name="loading_more">در حال بارگذاری…</string>
+    <string name="search_hint">Search news…</string>
+    <string name="empty_title">Nothing found</string>
+    <string name="empty_body">There are no articles to show.</string>
+    <string name="error_generic">Couldn\'t load. Check your internet connection.</string>
+    <string name="loading_more">Loading…</string>
 </resources>

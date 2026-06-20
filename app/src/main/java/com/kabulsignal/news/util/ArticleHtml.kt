@@ -1,9 +1,9 @@
 package com.kabulsignal.news.util
 
 /**
- * Wraps a WordPress post's rendered HTML in a self-contained, RTL-first document
- * styled for comfortable mobile reading. Colours adapt to the system dark mode
- * via `prefers-color-scheme` so it matches the surrounding Compose theme.
+ * Wraps a WordPress post's rendered HTML in a self-contained document styled for
+ * comfortable mobile reading. Colours adapt to the system dark mode via
+ * `prefers-color-scheme` so it matches the surrounding Compose theme.
  */
 object ArticleHtml {
 
@@ -22,7 +22,7 @@ object ArticleHtml {
 
     private fun wrap(bodyHtml: String): String = """
         <!DOCTYPE html>
-        <html lang="fa" dir="rtl">
+        <html lang="en" dir="ltr">
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,17 +50,17 @@ object ArticleHtml {
               color: var(--fg);
             }
             body {
-              font-family: -apple-system, "Roboto", "Noto Naskh Arabic", "Vazirmatn", sans-serif;
+              font-family: -apple-system, "Roboto", "Segoe UI", sans-serif;
               font-size: 18px;
-              line-height: 1.9;
+              line-height: 1.7;
               padding: 0 18px 32px;
               word-wrap: break-word;
               overflow-wrap: break-word;
-              text-align: justify;
+              text-align: left;
             }
             .hero { width: 100%; height: auto; border-radius: 12px; margin: 12px 0; display: block; }
-            .post-title { font-size: 26px; line-height: 1.4; margin: 8px 0 6px; text-align: right; }
-            .post-meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; text-align: right; }
+            .post-title { font-size: 26px; line-height: 1.3; margin: 8px 0 6px; text-align: left; }
+            .post-meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; text-align: left; }
             .rule { border: none; border-top: 1px solid var(--rule); margin: 12px 0 20px; }
             p { margin: 0 0 1.1em; }
             a { color: var(--accent); text-decoration: none; }
@@ -72,14 +72,14 @@ object ArticleHtml {
               display: block;
             }
             figcaption { color: var(--muted); font-size: 14px; text-align: center; }
-            h1, h2, h3, h4 { line-height: 1.4; }
+            h1, h2, h3, h4 { line-height: 1.3; }
             blockquote {
               margin: 1em 0;
               padding: 4px 14px;
-              border-right: 4px solid var(--accent);
+              border-left: 4px solid var(--accent);
               color: var(--muted);
             }
-            ul, ol { padding-right: 1.2em; padding-left: 0; }
+            ul, ol { padding-left: 1.2em; padding-right: 0; }
             table { max-width: 100%; border-collapse: collapse; }
             td, th { border: 1px solid var(--rule); padding: 6px; }
             pre { overflow-x: auto; background: rgba(127,127,127,0.12); padding: 12px; border-radius: 8px; }
