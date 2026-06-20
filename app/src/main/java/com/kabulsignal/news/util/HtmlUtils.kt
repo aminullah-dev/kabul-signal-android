@@ -17,7 +17,7 @@ fun String?.htmlToPlainText(): String {
 }
 
 private val displayDateFormatter: DateTimeFormatter =
-    DateTimeFormatter.ofPattern("d MMM yyyy", Locale.getDefault())
+    DateTimeFormatter.ofPattern("d MMM yyyy", Locale.ENGLISH)
 
 /**
  * Format a WordPress timestamp (e.g. `2026-06-19T10:30:00` or with an offset)
